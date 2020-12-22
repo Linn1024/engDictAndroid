@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/wordText"
+        android:layout_width="192dp"
+        android:layout_height="67dp"
+        android:gravity="center"
+        android:text="wordText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.137" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="111dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="24dp"
+        android:onClick="showWord"
+        android:text="@string/show_word"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wordText"
+        app:layout_constraintVertical_bias="0.524" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/myToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/wordText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/translateText"
+        android:layout_width="239dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wordText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/frequencyText"
+        android:layout_width="128dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="44dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/translateText" />
+
+    <EditText
+        android:id="@+id/restText"
+        android:layout_width="136dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="28dp"
+        android:digits="0123456789"
+        android:inputType="number"
+        android:onClick="changeCountLastWords"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/translateText" />
+
+    <Button
+        android:id="@+id/translateButton"
+        android:layout_width="140dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="48dp"
+        android:onClick="translateWord"
+        android:text="@string/translate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="80dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="22dp"
+        android:onClick="okWord"
+        android:text="OK"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/translateButton" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="80dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:onClick="wrongWord"
+        android:text="Wrong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/translateButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
